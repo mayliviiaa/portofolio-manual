@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Mifta Maylivia</title>
     
-    <!-- Link ke CSS -->
+    <!-- Link ke CSS (TETAP TERPISAH) -->
     <link rel="stylesheet" href="css/style.css">
     
     <!-- Font Awesome untuk Ikon -->
@@ -13,8 +13,24 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Khusus Partikel (Inline kecil aja) -->
+    <style>
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #0f172a;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Wadah Partikel (TAMBAHAN BARU) -->
+    <div id="particles-js"></div>
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -26,7 +42,6 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <!-- Hamburger Menu untuk HP -->
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -36,8 +51,7 @@
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
-        <!-- Pastikan nama file foto kamu sama -->
-        <img src="foto-maylivia.jpg..jpeg" alt="Foto Maylivia" class="profile-img">
+        <img src="images/foto-maylivia.jpg..jpeg" alt="Foto Maylivia" class="profile-img">
         <h1>Halo, Saya <span class="highlight">Mifta Maylivia</span></h1>
         <p class="subtitle">Student @ SMK Negeri 1 Nganjuk | Game Development Major</p>
         <p class="slogan">"Turning Imagination into Playable Reality"</p>
@@ -48,12 +62,7 @@
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
-            <p>
-                Halo! Saya adalah siswa kelas 10 di <strong>SMK Negeri 1 Nganjuk</strong>, 
-                jurusan Pengembangan Gim. Saya memiliki antusiasme tinggi dalam dunia coding 
-                dan desain game. Bagi saya, setiap baris kode adalah kesempatan untuk 
-                menciptakan dunia baru yang menyenangkan.
-            </p>
+            <p>Halo! Saya adalah siswa kelas 10 di <strong>SMK Negeri 1 Nganjuk</strong>, jurusan Pengembangan Gim. Saya memiliki antusiasme tinggi dalam dunia coding dan desain game. Bagi saya, setiap baris kode adalah kesempatan untuk menciptakan dunia baru yang menyenangkan.</p>
         </div>
     </section>
 
@@ -61,22 +70,10 @@
     <section id="skills" class="section">
         <h2 class="section-title">My Skills</h2>
         <div class="skills-container">
-            <div class="skill-card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-php"></i>
-                <h3>PHP</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-gamepad"></i>
-                <h3>Game Design</h3>
-            </div>
+            <div class="skill-card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+            <div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+            <div class="skill-card"><i class="fab fa-php"></i><h3>PHP</h3></div>
+            <div class="skill-card"><i class="fas fa-gamepad"></i><h3>Game Design</h3></div>
         </div>
     </section>
 
@@ -86,16 +83,8 @@
         <div class="project-card">
             <div class="project-info">
                 <h3>Aplikasi Kasir Sembako</h3>
-                <p>
-                    Sistem manajemen kasir sederhana untuk membantu pencatatan transaksi 
-                    harian toko sembako. Dibuat dengan logika pemrograman web yang efisien.
-                </p>
-                <div class="tech-stack">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                </div>
+                <p>Sistem manajemen kasir sederhana untuk membantu pencatatan transaksi harian toko sembako. Dibuat dengan logika pemrograman web yang efisien.</p>
+                <div class="tech-stack"><span>HTML</span><span>CSS</span><span>PHP</span><span>MySQL</span></div>
             </div>
         </div>
     </section>
@@ -106,7 +95,6 @@
         <div class="contact-container">
             <p>Tertarik untuk berkolaborasi atau sekadar menyapa?</p>
             <div class="social-links">
-                <!-- Ganti dengan link asli kamu -->
                 <a href="https://instagram.com/mayliviiaa" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a href="https://github.com/mayliviiaa" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="mailto:nurazizahnganjuk2010@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -115,11 +103,29 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2024 Mifta Maylivia Nur Azizah. All Rights Reserved.</p>
-    </footer>
+    <footer><p>&copy; 2024 Mifta Maylivia Nur Azizah. All Rights Reserved.</p></footer>
 
-    <!-- Link ke JS -->
+    <!-- Script Partikel dari Internet (TAMBAHAN BARU) -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Konfigurasi Partikel (Inline kecil aja) -->
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": { "value": 80 },
+                "color": { "value": "#ec4899" },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5 },
+                "size": { "value": 3 },
+                "move": { "enable": true, "speed": 2 }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" } }
+            }
+        });
+    </script>
+
+    <!-- Link ke JS (TETAP TERPISAH) -->
     <script src="js/script.js"></script>
 </body>
 </html>
